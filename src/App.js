@@ -2,7 +2,7 @@ import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem'; 
-import {CreateTodoButton} from './TodoBotton'
+import {TodoButton} from './TodoButton'
 
 import './App.css';
 
@@ -17,10 +17,9 @@ const defaulTodos = [
 function App() {
   return (
     < div className = "todo-app">
-      
+
       <TodoCounter completed={16} total={25}/>
       <TodoSearch/>
-
       <TodoList> 
         {defaulTodos.map(todo => {
           return(
@@ -33,7 +32,7 @@ function App() {
         })}
       </TodoList>
 
-      <CreateTodoButton/>
+      <TodoButton/>
 
     </div>
   );

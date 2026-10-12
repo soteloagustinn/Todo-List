@@ -1,6 +1,4 @@
-
-
-.todo-item {
+.TodoItem {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,28 +9,58 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.todo-item:hover{
+.TodoItem:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04)
 }
 
-.todo-text.completed{
+.TodoItem-p {
+    flex: 1;
+    font-size: 0.95rem;
+    color: #2d3436;
+    transition: color 0.2s ease;
+}
+
+.TodoItem-p--complete {
     text-decoration: line-through;
     color: #a0aec0;
 }
 
-.delete-button {
-    background-color: #ffeaa7;
-    color: #d63031;
-    border: none;
-    padding: 6px 12px;
+.Icon {
+    width: 28px;
+    height: 28px;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
     font-size: 0.85rem;
-    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    user-select: none;
+    transition: all 0.2s ease;
 }
 
-.delete-button:hover{
-    background-color: #fab1a0;
+.Icon-check {
+    background-color: #f1f5f9;
+    color: #94a3b8;
 }
+
+.Icon-check:hover {
+    background-color: #e2e8f0;
+}
+
+.Icon-check--active {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.Icon-delete {
+    background-color: #fff5f5;
+    color: #ff7675;
+}
+
+.Icon-delete:hover{
+    background-color: #ffe3e3;
+    color: #d63031;
+}
+
