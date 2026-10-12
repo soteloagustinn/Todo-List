@@ -1,0 +1,38 @@
+
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background-color: #fcfcfd;
+    border: 1px solid #f1f5f9;
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+}
+
+.todo-text.completed{
+    text-decoration: line-through;
+    color: #a0aec0;
+}
+
+.delete-button {
+    background-color: #ffeaa7;
+    color: #d63031;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.delete-button:hover{
+    background-color: #fab1a0;
+}

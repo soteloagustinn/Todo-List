@@ -16,8 +16,8 @@ const defaulTodos = [
 
 function App() {
   return (
-    <div className="App">
-     
+    < div className = "todo-app">
+      
       <TodoCounter completed={16} total={25}/>
       <TodoSearch/>
 
