@@ -2,7 +2,10 @@ import './TodoButton.css'
 
 function TodoButton() {
     return(
-        <button className="TodoButton">
+        <button className="TodoButton" 
+            onClick={(  ) => 
+                console.log('le diste clicl al boton')
+            }>
             +
         </button>
     )
