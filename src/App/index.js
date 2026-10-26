@@ -1,11 +1,15 @@
-import { TodoCounter } from './TodoCounter';
-import { TodoSearch } from './TodoSearch';
-import { TodoList } from './TodoList';
-import { TodoItem } from './TodoItem'; 
-import {TodoButton} from './TodoButton'
-
 import React from 'react'
 import './App.css';
+
+import { TodoCounter } from '../TodoCounter/TodoCounter';
+import { TodoSearch } from '../TodoSearch';
+import { TodoList } from '../TodoList';
+import { TodoItem } from '../TodoItem'; 
+import {TodoButton} from '../TodoButton/index'
+
+import { useLocalStorage } from './useLocalStorage';
+
+
 
 // const defaulTodos = [
 //  {text: 'Cortar cebolla', completed: true},
@@ -18,28 +22,6 @@ import './App.css';
 
 // localStorage.setItem('TODOS_V1', defaulTodos)
 
-
-function useLocalStorage(itemName, initiaValue){
-  const localStorageItem = localStorage.getItem(itemName)
-
-  let parsedItem;
-
-  if(localStorageItem){
-  parsedItem = JSON.parse(localStorageItem);
-  }else{
-    localStorage.setItem(itemName, JSON.stringify(initiaValue))
-    parsedItem = initiaValue;
-  };
-
-  const [item, setItem] = React.useState(parsedItem);
-
-  const saveItem = (newItem) => {
-    localStorage.setItem(itemName, JSON.stringify(newItem));
-    setItem(newItem);
-  }
-
-  return [item, saveItem];
-}
 
 function App() {
   
